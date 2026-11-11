@@ -31,7 +31,7 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 # Default API key
-DEFAULT_API_KEY = "AIzaSyC88vGjUkqyu4Ux_9zVCdk7Z88cpQi7uEM"
+DEFAULT_API_KEY = os.environ.get("GOOGLE_API_KEY", "")  # never hard-code keys
 # Gemini models
 DEFAULT_MODEL = "gemini-2.0-flash"
 FREE_TIER_MODEL = "gemini-2.0-flash"  # Lower-tier model
