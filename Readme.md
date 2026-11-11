@@ -288,3 +288,17 @@ Below are some screenshots demonstrating the application's interface and feature
 ### Results and Analysis
 ![Results and Analysis](Screenshot%20from%202025-06-24%2017-14-54.png)
 *Viewing the results, error analysis, and final Promela code.*
+
+## Live demo (Streamlit Community Cloud)
+
+The app can be hosted for free on [Streamlit Community Cloud](https://share.streamlit.io):
+
+1. Sign in with the GitHub account that owns this repo and click **Create app**.
+2. Pick this repo, branch `main`, and main file `streamlit_app.py`.
+3. Under **Advanced settings**, choose Python 3.11 or newer and add the secret:
+   ```toml
+   GOOGLE_API_KEY = "your-gemini-api-key"
+   ```
+4. Click **Deploy**. `packages.txt` installs the SPIN model checker on the server automatically.
+
+Never commit API keys; the app reads `GOOGLE_API_KEY` from the environment or the sidebar.
